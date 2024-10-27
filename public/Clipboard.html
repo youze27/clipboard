@@ -1,0 +1,35 @@
+<!DOCTYPE html>  
+<html lang="en">  
+<head>  
+    <meta charset="UTF-8">  
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">  
+    <title>剪贴板工具</title>  
+    <link rel="stylesheet" href="css/clipboard.css">
+    <link rel="stylesheet" href="fontawesome/css/all.min.css"> <!-- 本地Font Awesome -->
+    <link rel="stylesheet" href="css/prism.css"> <!-- 本地Prism.js CSS -->
+</head>  
+<body>  
+    <div class="container">
+        <div class="search-refresh">
+            <input type="text" id="clipboardTitle" placeholder="输入标题...">
+            <button onclick="addClipboardContent()">增加</button>  
+            <input type="text" id="searchInput" placeholder="搜索内容...">
+            <button onclick="searchClipboardContent()">搜索</button>  
+            <button onclick="refreshClipboardContent()"><i class="fas fa-sync-alt"></i></button> <!-- 刷新按钮 -->
+            <label class="switch">
+                <input type="checkbox" id="themeToggle" onclick="toggleTheme()">
+                <span class="slider round"></span>
+            </label>
+        </div>
+        <div class="controls">
+            <textarea id="clipboardInput" placeholder="输入剪贴板内容..."></textarea>  
+        </div>
+        <div id="clipboardContainer" class="clipboard-container"></div>  
+    </div>
+    <footer class="footer">
+        <p>© 2023 Youze. All rights reserved.</p>
+    </footer>
+    <script src="js/prism.js"></script> <!-- 本地Prism.js JS -->
+    <script src="js/Clipboard.js"></script>  
+</body>  
+</html>
